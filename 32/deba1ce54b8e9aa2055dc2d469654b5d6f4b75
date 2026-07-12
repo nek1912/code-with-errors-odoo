@@ -1,0 +1,61 @@
+frontend/src/pages/LoginPage.tsx
+  s_75b89833136d34::t_5f591fc1ff8d18 189-201,204-227,230-232
+  s_75b89833136d34::t_b2544c94eb45cc 186-188
+  s_75b89833136d34::t_679bff86e08542 233-235
+  s_75b89833136d34::t_ff37ae7141f8fa 8,12-48,60,66-73,79-94,103-113,115-126,128-129,131-135,137-170,173-176,178-184,236
+frontend/src/pages/SignupPage.tsx
+  s_75b89833136d34::t_5f591fc1ff8d18 151-153
+frontend/src/pages/MaintenanceBoard.tsx
+  s_75b89833136d34::t_e9441b02baa819 123,126
+  s_75b89833136d34::t_1cdbd96a2556c4 144
+frontend/src/pages/ReportsScreen.tsx
+  s_75b89833136d34::t_64fd866a1841fc 121
+  s_75b89833136d34::t_69b4c93d6cf501 48,50
+frontend/.gitignore
+  s_48e98f50c867dd::t_4d474d8c50c1ca 25-26
+frontend/index.html
+  s_bf2e724812db5a::t_12b8b5f041a02d 7
+frontend/src/App.tsx
+  s_bf2e724812db5a::t_9f3f17fa177608 1,22-30,49,105,121
+frontend/src/index.css
+  s_bf2e724812db5a::t_ffeeba91196575 2,5-25,27-49,54-74
+frontend/tsconfig.app.json
+  s_bf2e724812db5a::t_afdfce663c2b70 22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.12",
+  "base_commit_sha": "32deba1ce54b8e9aa2055dc2d469654b5d6f4b75",
+  "prompts": {},
+  "humans": {
+    "h_c5a3d01edfee72": {
+      "author": "ronak-ravtode <ronakravtode001@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_48e98f50c867dd": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "0c15149b-559a-49ed-9252-7e3452827cc7",
+        "model": "gpt-4.1"
+      },
+      "human_author": "ronak-ravtode <ronakravtode001@gmail.com>"
+    },
+    "s_75b89833136d34": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "07b4aa77-d0e7-42b2-a510-05ade1ec8935",
+        "model": "gpt-4.1"
+      },
+      "human_author": "ronak-ravtode <ronakravtode001@gmail.com>"
+    },
+    "s_bf2e724812db5a": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_0ab7dbf5effepT2Gy3nrn66yT6",
+        "model": "unknown"
+      },
+      "human_author": "ronak-ravtode <ronakravtode001@gmail.com>"
+    }
+  }
+}
