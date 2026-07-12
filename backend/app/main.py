@@ -52,6 +52,11 @@ def on_startup() -> None:
     init_db()
 
 
+@app.get("/")
+def root() -> dict[str, str]:
+    return {"status": "ok", "service": "AssetFlow API"}
+
+
 @app.get("/health")
 def health() -> dict[str, str]:
     return {"status": "ok"}
