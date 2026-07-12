@@ -1,0 +1,467 @@
+frontend/src/components/dashboard/ActivityFeed.tsx
+  s_bf2e724812db5a::t_d32f572bf48356 1-125
+backend/app/routers/auth.py
+  s_bf2e724812db5a::t_ee395fd05754e2 80-81,94-96,102-104
+  s_bf2e724812db5a::t_86c0e283966414 164,167
+  s_bf2e724812db5a::t_0546cf244b5097 203-253
+  s_bf2e724812db5a::t_5a5f94dc1f21b3 28-29,31,45-54,67-71
+  s_bf2e724812db5a::t_ae0246ea85829e 16
+  s_bf2e724812db5a::t_00d048f90b1996 78
+  s_bf2e724812db5a::t_697e8797205ea1 1-15,17-26,30,32-44,72-77,79,82-93,97-101,105,107-109,123-163,165-166,168-202
+  s_bf2e724812db5a::t_c59497f4ceaa4f 27
+  s_bf2e724812db5a::t_52c54d6d9a261b 55-66
+  s_bf2e724812db5a::t_1c67624f86a86e 106,110-122
+frontend/src/components/assets/RegisterAssetModal.tsx
+  s_bf2e724812db5a::t_170012d03fe56a 141
+  s_bf2e724812db5a::t_c1dfe1b3afe548 1-140,142-274
+frontend/tsconfig.app.json
+  s_bf2e724812db5a::t_8d5ec0d31da4eb 18-27
+  s_bf2e724812db5a::t_aa060f11a2cddf 1-17,28-30
+backend/app/config.py
+  s_bf2e724812db5a::t_26618e4706d7e0 3,6-10,20,22-24
+  s_bf2e724812db5a::t_3082b96c8257bb 11-16,18-19
+  s_bf2e724812db5a::t_85b7f58269c776 1-2,4-5,17,21
+frontend/src/components/org/EmployeesTab.tsx
+  s_bf2e724812db5a::t_f9f6e42928b196 7,11,23-27,56-144
+  s_bf2e724812db5a::t_15091493e2f7c7 1-6,8-10,12-22,28-55,145-146
+frontend/src/pages/AssetDirectory.tsx
+  s_bf2e724812db5a::t_7230de1e6d58f6 1-252
+frontend/src/components/maintenance/RaiseRequestModal.tsx
+  s_89374839aeddd7::t_5ee7c8bbd8da13 1-235
+backend/app/routers/assets.py
+  s_bf2e724812db5a::t_7fbd5b11b02fb3 27,176,260,264,299-302,329,372,386
+  s_bf2e724812db5a::t_d8f2d6906abc85 2-7,10-11,32-151,155,186-188,194-207,212,215-217,219-222,224,226,228,230-232,238-241,248,250-253,258,338,344-346,357-358,360-361,369,380,392-393
+  s_bf2e724812db5a::t_3c3ea20eda47b9 234-235,389
+  s_bf2e724812db5a::t_31659ba8de0559 1
+  s_bf2e724812db5a::t_56c4edbe067aaf 8-9
+  s_bf2e724812db5a::t_42da03212b6075 12-14,24-26
+  s_bf2e724812db5a::t_e179b5a0d68206 28-31
+  s_bf2e724812db5a::t_bfb72353806938 152-154
+  s_bf2e724812db5a::t_0ad1e168771066 156-158,173-175
+  s_bf2e724812db5a::t_7eeb93f8762534 177-179,183-185
+  s_bf2e724812db5a::t_9ff81fa712d47f 189-193
+  s_bf2e724812db5a::t_6e571a84be4999 208-211
+  s_bf2e724812db5a::t_0deb4dd420a740 213-214
+  s_bf2e724812db5a::t_6ece433a948736 218
+  s_bf2e724812db5a::t_23635584e9b7a1 223
+  s_bf2e724812db5a::t_a973ad457aad42 225
+  s_bf2e724812db5a::t_95b1d810e2f1e7 227
+  s_bf2e724812db5a::t_4a2c0443ab0101 229
+  s_bf2e724812db5a::t_303ca39a65b175 233
+  s_bf2e724812db5a::t_b5731b7b17ea85 236-237
+  s_bf2e724812db5a::t_06314701ba6b44 242-247
+  s_bf2e724812db5a::t_4269b40f8f70d6 249
+  s_bf2e724812db5a::t_7bb01e4d3e3dfb 254-257
+  s_bf2e724812db5a::t_9a9214c7040ad0 259
+  s_bf2e724812db5a::t_a1177011f4b2c2 261-263
+  s_bf2e724812db5a::t_d9b4d60fa7e1c5 265-267,296-298
+  s_bf2e724812db5a::t_24ee392348f4e5 303-305,326-328
+  s_bf2e724812db5a::t_eabdf70dabee7e 330-332,335-337
+  s_bf2e724812db5a::t_80c9feff8d8557 339-343
+  s_bf2e724812db5a::t_8d484cc021d02e 347-349,354-356
+  s_bf2e724812db5a::t_19f004cb173d13 359
+  s_bf2e724812db5a::t_3cdff3a75970e6 362-364,366-368
+  s_bf2e724812db5a::t_c67cf8a3b54695 370-371
+  s_bf2e724812db5a::t_2067faa06111ba 373-375,377-379
+  s_bf2e724812db5a::t_d5d13e65f2724e 381-385
+  s_bf2e724812db5a::t_3e8873bea7d35b 387-388
+  s_bf2e724812db5a::t_b1a2968f377049 390-391
+frontend/src/components/ui/toast.tsx
+  s_bf2e724812db5a::t_106e1488967e6a 1-68
+frontend/src/pages/NotificationsScreen.tsx
+  s_89374839aeddd7::t_adf7711f600a5b 1-154
+backend/app/routers/activity_logs.py
+  s_89374839aeddd7::t_fca8bfc4a34acd 1-98
+backend/app/routers/reports.py
+  s_89374839aeddd7::t_d6e891de545904 1-243
+frontend/src/components/allocation/AssetSelector.tsx
+  s_bf2e724812db5a::t_addd68af14629c 1-147
+frontend/src/index.css
+  s_89374839aeddd7::t_1222a8cc2fefe4 31-42
+  s_bf2e724812db5a::t_518d94c6a2635f 1-30
+models.py
+  s_bf2e724812db5a::t_1952340fbf643b 123-173
+  s_bf2e724812db5a::t_af9dd23af90964 218-219
+  s_bf2e724812db5a::t_9f20dff22b65aa 1-5,7-9,11-18,20,22-26,28-29,31-122,174-188,204-217,220-262,265-304,307-335,338-354,372-397,400-401,403-429,432-436,447-476,479-521,524-547,550-579,581-600,602-609
+  s_bf2e724812db5a::t_972c91d90a6c60 601
+  s_bf2e724812db5a::t_0e93aa94a4efee 6,10,19,21,27,30
+  s_bf2e724812db5a::t_013cf314b91da9 189-203
+  s_bf2e724812db5a::t_3e1bd04435f4b7 437-446
+  s_bf2e724812db5a::t_794318317dffb6 402
+  s_bf2e724812db5a::t_0de0f99bc53730 610-749
+  s_bf2e724812db5a::t_e5d7535e2bba47 580
+  s_bf2e724812db5a::t_980dabc6ff991e 355-371
+  s_bf2e724812db5a::t_713a5a3cc85723 263-264,305-306,336-337,398-399,430-431,477-478,522-523,548-549
+frontend/src/components/ui/label.tsx
+  s_bf2e724812db5a::t_48f9bc40ad5334 1-20
+backend/migrations/010_maintenance_indexes.sql
+  s_89374839aeddd7::t_6cf14ad4f9930c 1-10
+frontend/src/schemas/auth.ts
+  s_bf2e724812db5a::t_0232a1e6b8cb76 1-38
+backend/app/routers/employees.py
+  s_bf2e724812db5a::t_a226ab781d890e 11
+  s_bf2e724812db5a::t_a4f75aa2b87ca5 59-96
+  s_bf2e724812db5a::t_2a64c226e2ce2a 8
+  s_bf2e724812db5a::t_c51cf64abe56cb 134-147
+  s_bf2e724812db5a::t_74849d0717f1ab 1-7,9-10,12-58,97-133,148-153
+frontend/src/components/ui/dialog.tsx
+  s_bf2e724812db5a::t_d8ed160dfc43a5 3,5,9-18,20,22-23,25,28-31,34,38-39,43,49-56,62-70,74-79,83-91,95-103,106
+  s_bf2e724812db5a::t_623aa0d7b36348 1-2,4,6-8,19,21,24,26-27,32-33,35-37,40-42,44-48,57-61,71-73,80-82,92-94,104-105
+constraints.py
+  s_bf2e724812db5a::t_dbfc81bb309d69 353-354
+  s_bf2e724812db5a::t_00a3ab69947863 1-352
+frontend/src/components/ui/tabs.tsx
+  s_bf2e724812db5a::t_fb8d2f4f6b416c 1-69
+frontend/src/services/api.ts
+  s_89374839aeddd7::t_c3948f909b680c 267-305
+  s_89374839aeddd7::t_10026f885ab07a 17-21
+  s_bf2e724812db5a::t_43043d1b882f81 2-10,38
+  s_bf2e724812db5a::t_97957d139e30c9 1,39-67,69-130,442
+  s_89374839aeddd7::t_1c7af00c7e6fe3 22-25
+  s_89374839aeddd7::t_bad9da1c64853f 32
+  s_89374839aeddd7::t_2aadff8fa046be 331-370
+  s_89374839aeddd7::t_5db44b7bf38d2b 371-377
+  s_89374839aeddd7::t_86636633cc153c 306-330
+  s_89374839aeddd7::t_455de711d20d4b 26-31
+  s_89374839aeddd7::t_4da18ab06ea0c3 33-37
+  s_bf2e724812db5a::t_7b6a654117f381 191-266
+  s_bf2e724812db5a::t_9b4ea128b7d5e1 11-16
+  s_bf2e724812db5a::t_4e7f8919fac6f6 131-190
+  s_bf2e724812db5a::t_0ace14fd2befde 68
+frontend/src/components/assets/StatusBadge.tsx
+  s_bf2e724812db5a::t_fbbba026611006 1-19
+backend/app/schemas/reports.py
+  s_89374839aeddd7::t_edc423f43d9899 1-42
+backend/migrations/003_rls_policies.sql
+  s_bf2e724812db5a::t_0427cb6800cdd3 1-237
+frontend/src/components/org/CategoriesTab.tsx
+  s_bf2e724812db5a::t_bedee82e01ee8f 1,6,10,29-101,103-104
+  s_bf2e724812db5a::t_7e5c73072eb5fa 2-5,7-9,11-28,102,105-106
+frontend/src/components/ui/card.tsx
+  s_bf2e724812db5a::t_e32a8d6a4ae50e 1-54
+backend/app/schemas/dashboard.py
+  s_bf2e724812db5a::t_f15660d0db6b47 1-46
+backend/migrations/005_asset_tag_sequence.sql
+  s_bf2e724812db5a::t_fd28dd74560cdc 1-25
+backend/app/constraints.py
+  s_bf2e724812db5a::t_931c0790725833 353-356
+  s_bf2e724812db5a::t_881af1bee5e2f6 1-352
+frontend/src/components/maintenance/MaintenanceCard.tsx
+  s_89374839aeddd7::t_9825d4b15e4e30 1-135
+frontend/src/stores/authStore.ts
+  s_bf2e724812db5a::t_df37a0d98f1fe0 1-24
+frontend/src/components/reports/MaintenanceChart.tsx
+  s_89374839aeddd7::t_4489166bbb5942 1-77
+backend/app/routers/maintenance.py
+  s_bf2e724812db5a::t_6795d0b28e1eb9 2-6,8-10,27-28,122-123,127-135,142-148,172-183,190-193,195-197,200,202,204,214-217,221-223,322,379-380
+  s_89374839aeddd7::t_0dc1d504a82976 17,26
+  s_89374839aeddd7::t_707cea33df2105 325-341
+  s_89374839aeddd7::t_b129d62e70d412 1,7,11-16,18-25,29-121,124-126,136-141,149-171,184-189,194,198-199,201,203,205-213,218-220,224-321,323-324,342-378
+backend/app/schemas/notifications.py
+  s_89374839aeddd7::t_11db97d4fe8679 1-57
+backend/app/routers/categories.py
+  s_bf2e724812db5a::t_8afcd3c238eddb 1-7,10-11,13-105
+  s_bf2e724812db5a::t_0fff0b50d82a69 8-9,12
+  s_bf2e724812db5a::t_00cf9018a70404 106-150
+backend/app/models.py
+  s_89374839aeddd7::t_6225f9dc990c6e 185,201,209,218,238,242,248,253,275,287,294,299,356,370,374,398,434,477,527-566,581,590,615,629,648,678
+  s_89374839aeddd7::t_02d8632e1d92cc 318
+  s_bf2e724812db5a::t_b595ec196624ca 812
+  s_89374839aeddd7::t_c6fb678dd10779 611
+  s_bf2e724812db5a::t_57b384ea2100ae 77-82,99-100
+  s_bf2e724812db5a::t_500149ee000c94 282
+  s_bf2e724812db5a::t_833bbfc1dd1540 343-351
+  s_bf2e724812db5a::t_3691f2e88f64fe 254
+  s_bf2e724812db5a::t_51f3c37071a638 415-433
+  s_bf2e724812db5a::t_74308d9c042e1d 34,36,42,44,137,139,176,178,188,190,208,217,221,223,228,233-234,236,260,262,267,273,278-279,281,308,310,315,321-322,324,328,330,335,354,358-359,361,394,401,403,408-409,437,439,444-445,480-516,518,523-524,569,571,576,580,588,591-592,594,601,603,608,610,614,617-618,620,625,632,634,639,646,649,651,657,659,664,670,672,675
+  s_bf2e724812db5a::t_9293e267e7eeb3 63-69
+  s_bf2e724812db5a::t_03a10e235b2c3b 269
+  s_89374839aeddd7::t_5738a0feb3b43a 98,118
+  s_89374839aeddd7::t_bab75ff1d196d2 101
+  s_89374839aeddd7::t_9066b3e8bed2b7 447-476
+  s_bf2e724812db5a::t_bebefb405f38b2 1-33,35,37-41,43,45-62,70-76,83-97,102-117,119-136,138,140-175,177,179-184,186-187,189,191-200,202-207,210-216,219-220,222,224-227,229-232,235,237,239-241,243-247,249-252,255-259,261,263-266,268,270-272,274,276-277,280,283-286,288-293,295-298,300-307,309,311-314,316-317,319-320,323,325-327,329,331-334,336-342,352-353,355,357,360,362-369,371-373,375-393,395-397,399-400,402,404-407,410-414,435-436,438,440-443,446,478-479,517,519-522,525-526,567-568,570,572-575,577-579,582-587,589,593,595-600,602,604-607,609,612-613,616,619,621-624,626-628,630-631,633,635-638,640-645,647,650,652-656,658,660-663,665-669,671,673-674,676-677,679-811,813-819
+frontend/src/components/maintenance/KanbanColumn.tsx
+  s_89374839aeddd7::t_1346517dd540de 1-17,19-57
+  s_89374839aeddd7::t_5b31f10285a4e2 18
+backend/migrations/012_reports_indexes.sql
+  s_89374839aeddd7::t_ada29075fd66d7 1-17
+backend/app/database.py
+  s_bf2e724812db5a::t_4b7f8a7a139d9d 1-2,4-13,15-28
+  s_bf2e724812db5a::t_b2a84c1aeb3407 3,14,29-36
+backend/app/middleware/activity.py
+  s_89374839aeddd7::t_2447a0df33eb4c 1-168
+frontend/src/main.tsx
+  s_bf2e724812db5a::t_a983a6f33bc721 1-10
+frontend/src/components/dashboard/KpiCard.tsx
+  s_bf2e724812db5a::t_65b48c72c2fdc2 1-64
+backend/migrations/007_search_indexes.sql
+  s_bf2e724812db5a::t_ca234b1bf33e16 1-15
+frontend/src/components/booking/BookingTimeline.tsx
+  s_89374839aeddd7::t_71298ffdf7f597 1-152
+frontend/src/components/booking/BookSlotModal.tsx
+  s_89374839aeddd7::t_a4c7fe6cdf3d27 1-254
+frontend/src/components/org/EntityModal.tsx
+  s_bf2e724812db5a::t_f23775c4f707a8 8-10,14,16-27,119-121,176-188,192,196,198-199,202,204-253,255-260,265,267-303,305-310,315,317-339,341-346
+  s_bf2e724812db5a::t_17cfdcd6a3ade9 1-7,11-13,15,28-118,122-175,189-191,193-195,197,200-201,203,254,261-264,266,304,311-314,316,340,347-353
+frontend/src/components/dashboard/AlertBanner.tsx
+  s_bf2e724812db5a::t_93f5acba09e0a3 1-22
+frontend/src/pages/OrganizationSetup.tsx
+  s_bf2e724812db5a::t_7e280fc033fcc0 28,32-34
+  s_bf2e724812db5a::t_b1c1085b997946 1-27,29-31,35-84
+frontend/src/components/dashboard/Sidebar.tsx
+  s_bf2e724812db5a::t_bbcd2b3a9520a3 1,3-16,18-33,41-71,77-108
+  s_89374839aeddd7::t_c1f3ce8c6042ba 2,17
+  s_89374839aeddd7::t_a334ef2b60be7f 34-40,72-76
+frontend/package.json
+  s_bf2e724812db5a::t_8dde1579cecd6f 34,40
+  s_bf2e724812db5a::t_a6b73d8ad57798 1-12,24,32-33,35-39,41-44
+  s_89374839aeddd7::t_6e4391f3bbf994 28
+  s_bf2e724812db5a::t_73da14b598e088 13-23,25-27,29-31
+frontend/src/components/booking/ResourceSelector.tsx
+  s_89374839aeddd7::t_8b883410fb9ba1 1-147
+frontend/src/components/ProtectedRoute.tsx
+  s_bf2e724812db5a::t_be97e5138d63b2 1-20
+frontend/src/hooks/useAuthInit.ts
+  s_bf2e724812db5a::t_e233dc00ffed77 1-30
+backend/app/services/notifications.py
+  s_89374839aeddd7::t_80083da301a2da 1-76
+frontend/src/pages/AllocationTransferScreen.tsx
+  s_bf2e724812db5a::t_d9d373f96422a9 1-309
+frontend/src/components/ui/button.tsx
+  s_bf2e724812db5a::t_1093a6a05ff46a 1-82
+frontend/src/pages/ForgotPasswordPage.tsx
+  s_bf2e724812db5a::t_4c21bf1705fcc2 1-102
+frontend/src/pages/MaintenanceBoard.tsx
+  s_89374839aeddd7::t_1d3c1657a9187b 1-231
+frontend/src/components/ui/scroll-area.tsx
+  s_bf2e724812db5a::t_f8eac6f62c6b82 1-18
+frontend/src/components/assets/AssetTable.tsx
+  s_bf2e724812db5a::t_9aa829f8d76460 1-118
+backend/migrations/009_booking_indexes.sql
+  s_89374839aeddd7::t_28d57797aec598 1-17
+frontend/src/components/reports/UtilizationChart.tsx
+  s_89374839aeddd7::t_22daa21f844701 1-74
+backend/app/routers/bookings.py
+  s_89374839aeddd7::t_a913052e93f2a3 1,4,8-9,12-17,19-27,29-138,141-144,146-149,151,159-167,172-178,182,184-189,191-199,202,207-228,231,235,243,255-260,263,265,267-274,276-281,286-290,292-307,309-358,360-361,375-381
+  s_89374839aeddd7::t_b97f6a588d1116 363-374
+  s_89374839aeddd7::t_6652447735fbb3 18,28
+  s_bf2e724812db5a::t_547af85d9881ba 2-3,5-7,10-11,139-140,145,150,152-158,168-171,179-181,183,190,200-201,203-206,229-230,232-234,236-242,254,261-262,264,266,275,282-285,291,308,359,362,382-383
+  s_89374839aeddd7::t_7d6449d2fe6d3a 244-253
+frontend/src/lib/types.ts
+  s_bf2e724812db5a::t_34d54913ee1ec0 1-27,187-189
+  s_89374839aeddd7::t_dbc6842537f016 163,165,237-273
+  s_89374839aeddd7::t_58b512e83b2072 121,137-138,140,179,191,195-236
+  s_bf2e724812db5a::t_a294cdfd9b49b8 28-113,122,139,141-144,180,182,190,192
+  s_89374839aeddd7::t_ba95dd2ff07fd2 118,135-136,145-146,152-155,161,166-167,171,178,186,193,274-334
+  s_89374839aeddd7::t_08ca2416c774e9 119,132,147,160,168,174-175,183,194,335-372
+  s_89374839aeddd7::t_b33a6e60e0aeb6 120
+  s_89374839aeddd7::t_658d98f8351f13 133-134
+  s_89374839aeddd7::t_91035bc0e36977 148-151
+  s_89374839aeddd7::t_fae55d3649ffb3 156-159
+  s_89374839aeddd7::t_b53da22b285304 162
+  s_89374839aeddd7::t_6e1401872f1756 164
+  s_89374839aeddd7::t_0bbc59518f2447 169-170
+  s_89374839aeddd7::t_92b0af0b5ccdb3 172-173
+  s_89374839aeddd7::t_945a13fc980bfa 176-177
+  s_bf2e724812db5a::t_544047f49e210f 181
+  s_89374839aeddd7::t_32f491bd8ebc65 184-185
+  s_89374839aeddd7::t_2e05dc8179a64e 373-375
+backend/requirements.txt
+  s_bf2e724812db5a::t_9769f0ecafc1cd 1-5
+  s_bf2e724812db5a::t_d4f7aa1a8374ce 6-9
+frontend/src/pages/ResourceBookingScreen.tsx
+  s_89374839aeddd7::t_36d77b409398b0 1-221
+frontend/src/pages/LoginPage.tsx
+  s_bf2e724812db5a::t_d2dc16a05b3490 1-132
+backend/app/schemas/org.py
+  s_bf2e724812db5a::t_8339fd2033bc5e 42-61,69-70,80-81
+  s_bf2e724812db5a::t_ed990a695088ba 1-41,62-68,71-79,82-113
+backend/app/schemas/auth.py
+  s_bf2e724812db5a::t_2b01c487ca9e0d 57-60
+  s_bf2e724812db5a::t_8b601c8e866922 1-56,61-82
+.gitignore
+  s_bf2e724812db5a::t_e3a41dd56802ef 1-32
+frontend/src/components/org/DepartmentsTab.tsx
+  s_bf2e724812db5a::t_c7671c9e5515e3 7,11,48-129,131-132
+  s_bf2e724812db5a::t_3c919ccd6c6e4b 1-6,8-10,12-47,130,133-134
+backend/app/routers/allocations.py
+  s_89374839aeddd7::t_31d95fe569aa96 223-232
+  s_bf2e724812db5a::t_87b20ac498f002 1,4,8-10,13-18,20-21,25,27,34,37-40,45,47,51,55-56,65-142,145-146,151,157,162-171,174-175,177-178,181,183-184,195,204,209,211-214,216-218,233-236,240,242,247,250,280-281,284-287,302-304,309-310,323,330-336
+  s_bf2e724812db5a::t_9525695c3c5607 2-3,5-7,11-12,23-24,26,28-33,35-36,41-44,46,48-50,52-54,143-144,147-150,152-156,158-161,172-173,176,179-180,182,185-194,196-203,205-208,219-222,237-239,241,243-246,248-249,251-261,273-279,282-283,288-291,305-308,311-322,324-329,337-338
+  s_89374839aeddd7::t_f904080c69b8f5 19,22
+  s_89374839aeddd7::t_e981a6c73fbd25 292-301
+  s_bf2e724812db5a::t_7d3b953cfb0183 210,215
+  s_bf2e724812db5a::t_ece772616379dc 262-272
+  s_bf2e724812db5a::t_4017fa31281c0f 57-64
+frontend/src/components/assets/AssetDetailsSheet.tsx
+  s_bf2e724812db5a::t_1b04bcd4ba3864 1-273
+backend/migrations/004_org_rls.sql
+  s_bf2e724812db5a::t_399209668ba7b9 1-41
+backend/app/services/supabase.py
+  s_bf2e724812db5a::t_6933d6b55392c7 54,56,71,73-95
+  s_bf2e724812db5a::t_4c9ffa4d4d260e 1-53,55,57-70,96-198,206,223,246-268
+  s_bf2e724812db5a::t_975040536f94e3 72
+  s_bf2e724812db5a::t_ca7cb1e2d47561 199-205,207-222,224-225,229-241,245
+  s_bf2e724812db5a::t_bc7d915decbeea 226-228
+  s_bf2e724812db5a::t_572b7e763f9ebb 242-244
+frontend/index.html
+  s_bf2e724812db5a::t_a6b73d8ad57798 1-13
+backend/app/routers/dashboard.py
+  s_bf2e724812db5a::t_a2e05115ee6d83 1-259
+frontend/src/components/ui/table.tsx
+  s_bf2e724812db5a::t_153a20494b1884 1-53
+frontend/src/App.tsx
+  s_bf2e724812db5a::t_1a3cba8bee426b 12
+  s_bf2e724812db5a::t_61fa83c44a263c 11
+  s_89374839aeddd7::t_965bd275bb5c5e 13
+  s_bf2e724812db5a::t_f21c2f00692668 45-52
+  s_bf2e724812db5a::t_98e161d1c654e7 9,33
+  s_89374839aeddd7::t_e3bf705f03d997 93-100
+  s_89374839aeddd7::t_768d9399b1d6a7 69-73,90-92
+  s_89374839aeddd7::t_5c5d769d34a9c8 14
+  s_bf2e724812db5a::t_a4e57226a54929 5,10,30,37-44,129
+  s_89374839aeddd7::t_2a2c7df3b26a55 61-68
+  s_bf2e724812db5a::t_32eae1f5497a24 1-4,6-8,21-29,31-32,34-36,117-128,130-133
+  s_bf2e724812db5a::t_637d9195d8fbe2 53-60
+  s_89374839aeddd7::t_b09b6fbcd98c50 75-77,79-80,82-85,87-88,101-116
+  s_89374839aeddd7::t_b971e9fa1fd906 18-19
+  s_89374839aeddd7::t_7dcf9add07c064 17
+  s_bf2e724812db5a::t_352d56497c7796 15-16,20,74,78,81,86,89
+backend/app/routers/departments.py
+  s_bf2e724812db5a::t_e89cc28ea7a6db 1-178
+backend/migrations/006_add_asset_columns.sql
+  s_bf2e724812db5a::t_c27047aca89add 1-37
+backend/app/routers/transfers.py
+  s_89374839aeddd7::t_e2935add1da513 336-347
+  s_89374839aeddd7::t_b1fa3215761abf 282-304
+  s_bf2e724812db5a::t_8f4340eea90307 247,256,264
+  s_89374839aeddd7::t_d28b914ba4588c 19,24
+  s_bf2e724812db5a::t_229466b6e38cc8 1-18,20-23,25-246,248-255,257-263,265-281,305-335,348-386
+frontend/src/components/allocation/TransferForm.tsx
+  s_bf2e724812db5a::t_a88a0a5c02cb7c 1-247
+frontend/vite.config.ts
+  s_bf2e724812db5a::t_6057c3b5c00a92 1-21
+frontend/src/pages/SignupPage.tsx
+  s_bf2e724812db5a::t_079f576f2e1717 12,17
+  s_bf2e724812db5a::t_bcffef0d7874ba 1-11,13-16,18-42,48-166
+  s_bf2e724812db5a::t_59f980368647dc 43-47
+frontend/src/lib/utils.ts
+  s_bf2e724812db5a::t_740a5c95a925e5 1-6
+backend/app/schemas/audits.py
+  s_89374839aeddd7::t_8bc29075569152 1-72
+backend/app/main.py
+  s_bf2e724812db5a::t_610cffd5358040 14
+  s_bf2e724812db5a::t_250f1faa5d9645 7,33
+  s_bf2e724812db5a::t_39a45b5c4e8c69 1,3,5,21,48-57
+  s_bf2e724812db5a::t_baeb1604af242d 11-13,37-39
+  s_bf2e724812db5a::t_5a4bc9f5434ad4 2,4,6,22-32
+  s_bf2e724812db5a::t_56bed4f6068583 8-10,34-36
+  s_89374839aeddd7::t_c65f6f5512dbcc 18-20
+  s_89374839aeddd7::t_77f0d35e596d28 42
+  s_bf2e724812db5a::t_4dc1b763bf60d0 40
+  s_89374839aeddd7::t_2a0eb803f3ec40 44-47
+  s_89374839aeddd7::t_be7193322bfe63 16
+  s_89374839aeddd7::t_c24cd8738395a1 17
+  s_89374839aeddd7::t_45d24e1c28f9be 43
+  s_bf2e724812db5a::t_bd4a444a8fa003 41
+  s_bf2e724812db5a::t_ec84763c870e4c 15
+backend/migrations/011_audit_indexes.sql
+  s_89374839aeddd7::t_38aea3e1b592f0 1-10
+frontend/src/components/allocation/AllocationHistory.tsx
+  s_bf2e724812db5a::t_ee28109e8c4715 1-81
+frontend/src/components/notifications/NotificationItem.tsx
+  s_89374839aeddd7::t_2cb7fa3a8c1a7f 1-67
+.env.example
+  s_bf2e724812db5a::t_a4eaadd8294673 1-3
+backend/migrations/001_auth.sql
+  s_bf2e724812db5a::t_63cb2ae68c0c04 1-22,24-53,55-61,63-76,78-84,86-92,94-100,102-113,115-121,123-127,129-137,139-146,148-151,153-154,157
+  s_bf2e724812db5a::t_52e03723388998 23,54,62,77,85,93,101,114,122,128,138,147,152,155-156,158
+backend/app/routers/notifications.py
+  s_89374839aeddd7::t_7193dcda8dc299 1-188
+frontend/src/pages/ActivityLogsTable.tsx
+  s_89374839aeddd7::t_e1b4fb03e73bcd 1-160
+frontend/src/pages/DashboardPage.tsx
+  s_bf2e724812db5a::t_1fb9f70f46c881 81
+  s_bf2e724812db5a::t_817315595242bb 2
+  s_bf2e724812db5a::t_87f7f5a5114eec 152,162,172
+  s_bf2e724812db5a::t_a7d4b495c843ef 1,3-80,82-151,153-161,163-171,173-191
+frontend/src/components/ui/skeleton.tsx
+  s_bf2e724812db5a::t_98534b465f280a 1-15
+frontend/src/components/ui/badge.tsx
+  s_bf2e724812db5a::t_21b19d4a3f691c 1-32
+frontend/src/components/ui/input.tsx
+  s_bf2e724812db5a::t_668e6c4f6e4e97 1-21
+backend/app/dependencies.py
+  s_bf2e724812db5a::t_b8bf6a178a21a8 46,51
+  s_bf2e724812db5a::t_c507c910bf6a3a 6,77-100
+  s_bf2e724812db5a::t_be19996023c6be 14,18,21-26
+  s_bf2e724812db5a::t_c270fd37ba8ff8 45,47-50,52-56
+  s_bf2e724812db5a::t_3188a623ab6de7 1-5,7-10,13,15-17,19-20,27-44,57-76
+  s_bf2e724812db5a::t_85b2568d4ea9f0 11-12
+frontend/src/components/PasswordStrengthIndicator.tsx
+  s_bf2e724812db5a::t_2ddbf27e644155 1-72
+backend/app/routers/audits.py
+  s_89374839aeddd7::t_a41038e0fd53e2 21
+  s_89374839aeddd7::t_8aed22a1a2f9e2 27-30
+  s_89374839aeddd7::t_b98c4b40aa06f3 1-20,22-26,31-540
+frontend/src/components/reports/AssetListCard.tsx
+  s_89374839aeddd7::t_81bfd47ab91b11 1-86
+backend/migrations/008_transfers.sql
+  s_bf2e724812db5a::t_0601e397d38253 1-32
+backend/app/schemas/resources.py
+  s_89374839aeddd7::t_dbf09b0f1645f5 103,106-112,117,122-137
+  s_89374839aeddd7::t_93d2629d33d737 148-156,161-162,166-167,169,171-178
+  s_bf2e724812db5a::t_d0cc1d2efa8835 1-4,6-13,15-16,20,22,33-38,42,53,55,96-102,104-105,113-116,118-121,138-147,157-160,163-165,168,170
+  s_bf2e724812db5a::t_da6343b7d981ed 5,14,17-19,21,23-32,39-41,43-52,54,56-95
+frontend/.gitignore
+  s_bf2e724812db5a::t_7b80bf99025c7b 1-24
+frontend/.oxlintrc.json
+  s_bf2e724812db5a::t_cd7f0c287210c6 1-8
+frontend/README.md
+  s_bf2e724812db5a::t_79243f1f288a24 1-32
+frontend/package-lock.json
+  s_89374839aeddd7::t_d43a7c45200ae7 1-3190
+frontend/public/favicon.svg
+  s_bf2e724812db5a::t_959b402d0cba7f 1
+frontend/public/icons.svg
+  s_bf2e724812db5a::t_b6560013ce8c84 1-24
+frontend/src/App.css
+  s_bf2e724812db5a::t_85d5c60c282dbf 1-184
+frontend/src/assets/react.svg
+  s_bf2e724812db5a::t_5bb88eaf857445 1
+frontend/src/assets/vite.svg
+  s_bf2e724812db5a::t_fbdab0629ea3a7 1
+frontend/tsconfig.json
+  s_bf2e724812db5a::t_48295110712b62 1-7
+frontend/tsconfig.node.json
+  s_bf2e724812db5a::t_2b245cf79f13c8 1-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.12",
+  "base_commit_sha": "710ba95ef6844abbfddbd293ff6504ee2ae175f3",
+  "prompts": {},
+  "humans": {
+    "h_c5a3d01edfee72": {
+      "author": "ronak-ravtode <ronakravtode001@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_89374839aeddd7": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_0aa979786ffeiCguUXgtgaTvC0",
+        "model": "unknown"
+      },
+      "human_author": "ronak-ravtode <ronakravtode001@gmail.com>"
+    },
+    "s_bf2e724812db5a": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_0ab7dbf5effepT2Gy3nrn66yT6",
+        "model": "unknown"
+      },
+      "human_author": "ronak-ravtode <ronakravtode001@gmail.com>"
+    }
+  }
+}
