@@ -1,0 +1,26 @@
+backend/api/index.py
+  s_48e98f50c867dd::t_ec17b79e0f4a85 1-8
+backend/vercel.json
+  s_48e98f50c867dd::t_698a84c59c2946 1-9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.12",
+  "base_commit_sha": "4cf0adc88522c56d3862be12714dfe7ef9c83b3b",
+  "prompts": {},
+  "humans": {
+    "h_c5a3d01edfee72": {
+      "author": "ronak-ravtode <ronakravtode001@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_48e98f50c867dd": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "0c15149b-559a-49ed-9252-7e3452827cc7",
+        "model": "gpt-4.1"
+      },
+      "human_author": "ronak-ravtode <ronakravtode001@gmail.com>"
+    }
+  }
+}
