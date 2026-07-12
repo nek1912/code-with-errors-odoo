@@ -174,7 +174,7 @@ async def create_transfer(
 @router.patch(
     "/{transfer_id}/approve",
     response_model=TransferResponse,
-    dependencies=[Depends(require_role("ADMIN", "ASSET_MANAGER"))],
+    dependencies=[Depends(require_role("ADMIN", "ASSET_MANAGER", "DEPARTMENT_HEAD"))],
 )
 async def approve_transfer(
     transfer_id: UUID,
@@ -312,7 +312,7 @@ async def approve_transfer(
 @router.patch(
     "/{transfer_id}/reject",
     response_model=TransferResponse,
-    dependencies=[Depends(require_role("ADMIN", "ASSET_MANAGER"))],
+    dependencies=[Depends(require_role("ADMIN", "ASSET_MANAGER", "DEPARTMENT_HEAD"))],
 )
 async def reject_transfer(
     transfer_id: UUID,

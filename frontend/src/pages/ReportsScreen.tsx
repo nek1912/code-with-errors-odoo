@@ -45,9 +45,9 @@ export default function ReportsScreen() {
   };
 
   return (
-    <div className="flex h-screen bg-neutral-950">
+    <div className="min-h-screen bg-neutral-950">
       <Sidebar />
-      <div className="no-print flex-1 overflow-y-auto">
+      <main className="ml-60 flex-1 no-print overflow-y-auto">
         <div className="mx-auto max-w-7xl px-6 py-8">
           <div className="mb-8 flex items-center justify-between">
             <div>
@@ -118,7 +118,7 @@ export default function ReportsScreen() {
             </div>
           )}
         </div>
-      </div>
+      </main>
     </div>
   );
 }

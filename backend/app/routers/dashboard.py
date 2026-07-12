@@ -120,6 +120,10 @@ def _build_overview(
     db: Session, user: dict[str, Any]
 ) -> DashboardOverview:
     """Core logic: build the dashboard overview response."""
+    role = user.get("role", "EMPLOYEE")
+    dept_id = user.get("department_id")
+    user_id = user.get("id")
+
     asset_filters = _get_asset_filters(user)
     alloc_filters = _get_allocation_filters(user)
     booking_filters = _get_booking_filters(user)
@@ -131,7 +135,6 @@ def _build_overview(
     )
     for f in asset_filters:
         q_available = q_available.where(f)
-    assets_available = db.scalar(q_available) or 0
 
     # ── KPI 2: Assets Allocated ──────────────────────────────────
     q_allocated = select(func.count(Asset.id)).where(
@@ -139,15 +142,21 @@ def _build_overview(
     )
     for f in asset_filters:
         q_allocated = q_allocated.where(f)
-    assets_allocated = db.scalar(q_allocated) or 0
 
-    # ── KPI 3: Assets Reserved ───────────────────────────────────
-    q_reserved = select(func.count(Asset.id)).where(
-        Asset.current_status == AssetStatus.RESERVED
+    # ── KPI 3: Maintenance Today ─────────────────────────────────
+    q_maintenance = select(func.count(MaintenanceRequest.id)).where(
+        MaintenanceRequest.status.in_([
+            MaintenanceStatus.APPROVED,
+            MaintenanceStatus.TECHNICIAN_ASSIGNED,
+            MaintenanceStatus.IN_PROGRESS
+        ])
     )
-    for f in asset_filters:
-        q_reserved = q_reserved.where(f)
-    assets_reserved = db.scalar(q_reserved) or 0
+    if role in ("ADMIN", "ASSET_MANAGER"):
+        pass
+    elif role == "DEPARTMENT_HEAD" and dept_id:
+        q_maintenance = q_maintenance.join(Asset).where(Asset.department_id == UUID(str(dept_id)))
+    elif user_id:
+        q_maintenance = q_maintenance.where(MaintenanceRequest.requested_by_user_id == UUID(str(user_id)))
 
     # ── KPI 4: Active Bookings ───────────────────────────────────
     q_active_bookings = select(func.count(Booking.id)).where(
@@ -155,7 +164,6 @@ def _build_overview(
     )
     for f in booking_filters:
         q_active_bookings = q_active_bookings.where(f)
-    active_bookings = db.scalar(q_active_bookings) or 0
 
     # ── KPI 5: Pending Transfers ─────────────────────────────────
     q_pending = select(func.count(Allocation.id)).where(
@@ -163,10 +171,8 @@ def _build_overview(
     )
     for f in alloc_filters:
         q_pending = q_pending.where(f)
-    pending_transfers = db.scalar(q_pending) or 0
 
     # ── KPI 6: Upcoming Returns ──────────────────────────────────
-    # Allocations with expected_return_date in the next 7 days, still ACTIVE
     q_returns = select(func.count(Allocation.id)).where(
         and_(
             Allocation.status == AllocationStatus.ACTIVE,
@@ -179,7 +185,6 @@ def _build_overview(
     )
     for f in alloc_filters:
         q_returns = q_returns.where(f)
-    upcoming_returns = db.scalar(q_returns) or 0
 
     # ── Alert: Overdue Assets ────────────────────────────────────
     q_overdue = select(func.count(Allocation.id)).where(
@@ -191,7 +196,30 @@ def _build_overview(
     )
     for f in alloc_filters:
         q_overdue = q_overdue.where(f)
-    overdue_count = db.scalar(q_overdue) or 0
+
+    # ── Combined Execution in 1 Roundtrip ────────────────────────
+    q_combined = select(
+        q_available.scalar_subquery(),
+        q_allocated.scalar_subquery(),
+        q_maintenance.scalar_subquery(),
+        q_active_bookings.scalar_subquery(),
+        q_pending.scalar_subquery(),
+        q_returns.scalar_subquery(),
+        q_overdue.scalar_subquery(),
+    )
+    counts = db.execute(q_combined).fetchone()
+    if counts:
+        (
+            assets_available,
+            assets_allocated,
+            maintenance_today,
+            active_bookings,
+            pending_transfers,
+            upcoming_returns,
+            overdue_count,
+        ) = counts
+    else:
+        assets_available = assets_allocated = maintenance_today = active_bookings = pending_transfers = upcoming_returns = overdue_count = 0
 
     alert = None
     if overdue_count > 0:
@@ -201,7 +229,6 @@ def _build_overview(
         )
 
     # ── Quick Actions ────────────────────────────────────────────
-    role = user.get("role", "EMPLOYEE")
     quick_actions = QuickActions(
         can_register_asset=role in ("ADMIN", "ASSET_MANAGER"),
         can_book_resource=True,
@@ -245,7 +272,7 @@ def _build_overview(
     kpis = [
         KpiCard(value=assets_available, label="Assets Available"),
         KpiCard(value=assets_allocated, label="Assets Allocated"),
-        KpiCard(value=assets_reserved, label="Assets Reserved"),
+        KpiCard(value=maintenance_today, label="Maintenance Today"),
         KpiCard(value=active_bookings, label="Active Bookings"),
         KpiCard(value=pending_transfers, label="Pending Transfers"),
         KpiCard(value=upcoming_returns, label="Upcoming Returns"),

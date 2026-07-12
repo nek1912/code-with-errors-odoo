@@ -13,8 +13,8 @@ class AuditCycleCreateRequest(BaseModel):
     name: str = Field(..., min_length=1, max_length=255)
     scope_type: str = Field(..., pattern="^(DEPARTMENT|LOCATION|ALL)$")
     scope_id: Optional[UUID] = None
-    start_date: date
-    end_date: date
+    start_date: datetime
+    end_date: datetime
     auditor_ids: list[UUID] = Field(..., min_length=1)
 
 
@@ -24,8 +24,8 @@ class AuditCycleResponse(BaseModel):
     scope_type: str
     scope_id: Optional[UUID] = None
     created_by_user_id: UUID
-    start_date: date
-    end_date: date
+    start_date: datetime
+    end_date: datetime
     status: str
     created_at: datetime
     updated_at: datetime

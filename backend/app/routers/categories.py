@@ -34,7 +34,7 @@ def _build_response(cat: AssetCategory) -> CategoryResponse:
 
 @router.get("", response_model=list[CategoryResponse])
 async def list_categories(
-    current_user: dict[str, Any] = Depends(require_role("ADMIN")),
+    current_user: dict[str, Any] = Depends(get_current_active_user),
 ):
     from ..database import SessionLocal
     db = SessionLocal()

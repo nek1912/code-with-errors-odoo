@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useAuthInit } from "@/hooks/useAuthInit";
@@ -18,7 +19,15 @@ import ReportsScreen from "@/pages/ReportsScreen";
 import NotificationsScreen from "@/pages/NotificationsScreen";
 import ActivityLogsTable from "@/pages/ActivityLogsTable";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 5 * 60 * 1000, // Keep data fresh for 5 minutes in memory
+      refetchOnWindowFocus: false, // Stop refetching whenever user clicks browser window
+      retry: 1,
+    },
+  },
+});
 
 function AuthRoutes() {
   return (
@@ -37,7 +46,7 @@ function AuthRoutes() {
       <Route
         path="/dashboard/org-setup"
         element={
-          <ProtectedRoute>
+          <ProtectedRoute allowedRoles={["ADMIN"]}>
             <OrganizationSetup />
           </ProtectedRoute>
         }
@@ -93,7 +102,7 @@ function AuthRoutes() {
       <Route
         path="/dashboard/reports"
         element={
-          <ProtectedRoute>
+          <ProtectedRoute allowedRoles={["ADMIN", "ASSET_MANAGER", "DEPARTMENT_HEAD"]}>
             <ReportsScreen />
           </ProtectedRoute>
         }
@@ -109,7 +118,7 @@ function AuthRoutes() {
       <Route
         path="/dashboard/activity-logs"
         element={
-          <ProtectedRoute>
+          <ProtectedRoute allowedRoles={["ADMIN", "ASSET_MANAGER"]}>
             <ActivityLogsTable />
           </ProtectedRoute>
         }

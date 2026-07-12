@@ -52,7 +52,7 @@ async def _check_circular(db, parent_id: UUID | None, exclude_id: UUID | None = 
 
 @router.get("", response_model=list[DepartmentResponse])
 async def list_departments(
-    current_user: dict[str, Any] = Depends(require_role("ADMIN")),
+    current_user: dict[str, Any] = Depends(get_current_active_user),
 ):
     from ..database import SessionLocal
     db = SessionLocal()

@@ -87,7 +87,7 @@ export async function signup(data: {
   full_name: string;
   email: string;
   password: string;
-}): Promise<{ message: string }> {
+}): Promise<AuthResponse> {
   const res = await api.post("/auth/signup", data);
   return res.data;
 }

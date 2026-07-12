@@ -25,9 +25,7 @@ import type { Asset } from "@/lib/types";
 
 const raiseSchema = z.object({
   asset_id: z.string().min(1, "Select an asset"),
-  priority: z.enum(["LOW", "MEDIUM", "HIGH", "CRITICAL"], {
-    errorMap: () => ({ message: "Select a priority" }),
-  }),
+  priority: z.enum(["LOW", "MEDIUM", "HIGH", "CRITICAL"]),
   issue_description: z
     .string()
     .min(1, "Describe the issue")

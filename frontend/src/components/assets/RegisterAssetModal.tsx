@@ -51,7 +51,7 @@ export function RegisterAssetModal({ open, onOpenChange }: RegisterAssetModalPro
     watch,
     setValue,
     formState: { errors },
-  } = useForm<AssetFormValues>({
+  } = useForm<any>({
     resolver: zodResolver(assetSchema),
     defaultValues: {
       name: "",
@@ -101,7 +101,7 @@ export function RegisterAssetModal({ open, onOpenChange }: RegisterAssetModalPro
     if (!open) reset();
   }, [open, reset]);
 
-  const onSubmit = (values: AssetFormValues) => {
+  const onSubmit = (values: any) => {
     const payload: AssetRegisterPayload = {
       name: values.name,
       serial_number: values.serial_number || undefined,
@@ -139,7 +139,7 @@ export function RegisterAssetModal({ open, onOpenChange }: RegisterAssetModalPro
             <div>
               <label className={labelCls}>Name *</label>
               <input {...register("name")} className={inputCls} placeholder="e.g. MacBook Pro 14&quot;" />
-              {errors.name && <p className={errorCls}>{errors.name.message}</p>}
+              {errors.name && <p className={errorCls}>{String(errors.name.message)}</p>}
             </div>
 
             {/* Serial + Condition (2-col) */}
@@ -212,9 +212,9 @@ export function RegisterAssetModal({ open, onOpenChange }: RegisterAssetModalPro
                   className={inputCls}
                   placeholder="e.g. 1299.99"
                 />
-                {errors.acquisition_cost && (
-                  <p className={errorCls}>{errors.acquisition_cost.message}</p>
-                )}
+                 {errors.acquisition_cost && (
+                   <p className={errorCls}>{String(errors.acquisition_cost.message)}</p>
+                 )}
               </div>
             </div>
 
@@ -237,7 +237,7 @@ export function RegisterAssetModal({ open, onOpenChange }: RegisterAssetModalPro
                 className={inputCls}
                 placeholder="https://example.com/photo.jpg"
               />
-              {errors.photo_url && <p className={errorCls}>{errors.photo_url.message}</p>}
+               {errors.photo_url && <p className={errorCls}>{String(errors.photo_url.message)}</p>}
             </div>
 
             {/* Shared toggle */}

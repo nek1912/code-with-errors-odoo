@@ -7,7 +7,7 @@ import { RegisterAssetModal } from "@/components/assets/RegisterAssetModal";
 import { AssetDetailsSheet } from "@/components/assets/AssetDetailsSheet";
 import { getAssets, getCategories, getDepartments } from "@/services/api";
 import { useAuthStore } from "@/stores/authStore";
-import type { Asset, AssetDirectoryParams } from "@/lib/types";
+import type { Asset } from "@/lib/types";
 
 function useDebounce<T>(value: T, delay: number): T {
   const [debounced, setDebounced] = useState(value);
@@ -32,7 +32,7 @@ export default function AssetDirectory() {
 
   const debouncedSearch = useDebounce(search, 300);
 
-  const params: AssetDirectoryParams = useMemo(
+  const params = useMemo(
     () => ({
       search: debouncedSearch || undefined,
       category_id: categoryId || undefined,

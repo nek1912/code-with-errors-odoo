@@ -73,7 +73,7 @@ export function ActivityFeed({ items }: ActivityFeedProps) {
             No recent activity to display.
           </div>
         ) : (
-          <ScrollArea className="h-[380px]">
+          <div className="h-[380px] overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <div className="divide-y divide-neutral-800/60">
               {items.map((item) => {
                 const config = actionConfig[item.action_type] ?? {
@@ -94,30 +94,36 @@ export function ActivityFeed({ items }: ActivityFeedProps) {
                         config.bg
                       )}
                     >
-                      <Icon className={cn("h-3.5 w-3.5", config.color)} />
+                      <Icon className={cn("h-4 w-4", config.color)} />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="text-sm text-white">
-                        <span className="font-medium">{item.entity_name}</span>
-                        <span className="mx-1.5 text-neutral-600">&mdash;</span>
-                        <span className={config.color}>
-                          {item.action_type.replace(/_/g, " ").toLowerCase()}
-                        </span>
+                      <p className="text-sm font-medium text-white">
+                        {item.user_name ? (
+                          <span className="font-semibold">{item.user_name}</span>
+                        ) : (
+                          <span className="italic text-neutral-500">System</span>
+                        )}{" "}
+                        {item.action_type.toLowerCase().replace(/_/g, " ")}d{" "}
+                        {item.entity_name && (
+                          <span className="font-semibold text-blue-500">
+                            {item.entity_name}
+                          </span>
+                        )}
                       </p>
-                      {item.user_name && (
-                        <p className="mt-0.5 text-xs text-neutral-500">
-                          by {item.user_name}
-                        </p>
-                      )}
+                      <div className="mt-1 flex items-center gap-2">
+                        <span className="rounded bg-neutral-800 px-1.5 py-0.5 text-[10px] font-medium text-neutral-400 uppercase">
+                          {item.entity_type}
+                        </span>
+                      </div>
                     </div>
-                    <span className="shrink-0 text-xs text-neutral-600">
+                    <span className="text-xs text-neutral-500">
                       {timeAgo(item.timestamp)}
                     </span>
                   </div>
                 );
               })}
             </div>
-          </ScrollArea>
+          </div>
         )}
       </CardContent>
     </Card>

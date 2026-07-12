@@ -3,7 +3,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { AlertTriangle, CheckCircle, UserPlus, ArrowLeftRight } from "lucide-react";
+import { AlertTriangle, CheckCircle, UserPlus, ArrowLeftRight, RotateCcw } from "lucide-react";
 import { Sidebar } from "@/components/dashboard/Sidebar";
 import { AssetSelector } from "@/components/allocation/AssetSelector";
 import { TransferForm } from "@/components/allocation/TransferForm";
@@ -14,6 +14,7 @@ import {
   createAllocation,
   getEmployees,
   getErrorMessage,
+  returnAsset,
 } from "@/services/api";
 import { toast } from "@/components/ui/toast";
 import { useAuthStore } from "@/stores/authStore";
@@ -129,10 +130,36 @@ export default function AllocationTransferScreen() {
   };
 
   // ── Transfer success handler ─────────────────────────────────
+  const [activeAction, setActiveAction] = useState<"transfer" | "return">("transfer");
+  const [returnNotes, setReturnNotes] = useState("");
 
   const handleTransferSuccess = () => {
     queryClient.invalidateQueries({ queryKey: ["allocation-status", selectedAsset?.id] });
     queryClient.invalidateQueries({ queryKey: ["asset-detail", selectedAsset?.id] });
+  };
+
+  const returnMutation = useMutation({
+    mutationFn: () => returnAsset(allocStatus!.active_allocation_id!, returnNotes || undefined),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["allocation-status"] });
+      queryClient.invalidateQueries({ queryKey: ["asset-detail"] });
+      queryClient.invalidateQueries({ queryKey: ["assets"] });
+      toast({ title: "Asset returned successfully", variant: "success" });
+      setReturnNotes("");
+      setSelectedAsset(null); // Clear selection to refresh
+    },
+    onError: (error: unknown) => {
+      toast({
+        title: "Return failed",
+        description: getErrorMessage(error),
+        variant: "error",
+      });
+    },
+  });
+
+  const handleReturnSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    returnMutation.mutate();
   };
 
   const allocationHistory = (assetDetail?.allocation_history ?? []) as AllocationHistoryItem[];
@@ -237,19 +264,76 @@ export default function AllocationTransferScreen() {
           {allocStatus && canAllocate && (
             <div className="mb-6 rounded-xl border border-neutral-800 bg-neutral-900 p-6">
               {isAllocated && holder ? (
-                <>
-                  <div className="mb-4 flex items-center gap-2">
-                    <ArrowLeftRight className="h-4 w-4 text-neutral-400" />
-                    <h2 className="text-sm font-medium text-white">Transfer Request</h2>
+                <div className="space-y-6">
+                  {/* Action Selector Tabs */}
+                  <div className="flex border-b border-neutral-800 pb-3">
+                    <button
+                      type="button"
+                      onClick={() => setActiveAction("transfer")}
+                      className={`mr-4 pb-2 text-sm font-medium border-b-2 transition-colors ${
+                        activeAction === "transfer"
+                          ? "border-blue-500 text-white"
+                          : "border-transparent text-neutral-400 hover:text-white"
+                      }`}
+                    >
+                      Transfer Request
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setActiveAction("return")}
+                      className={`pb-2 text-sm font-medium border-b-2 transition-colors ${
+                        activeAction === "return"
+                          ? "border-blue-500 text-white"
+                          : "border-transparent text-neutral-400 hover:text-white"
+                      }`}
+                    >
+                      Return Asset
+                    </button>
                   </div>
-                  <TransferForm
-                    asset={selectedAsset!}
-                    currentHolderId={holder.user_id}
-                    currentHolderName={holder.user_name}
-                    onSuccess={handleTransferSuccess}
-                  />
-                </>
-              ) : (
+
+                  {activeAction === "transfer" ? (
+                    <>
+                      <div className="mb-4 flex items-center gap-2">
+                        <ArrowLeftRight className="h-4 w-4 text-neutral-400" />
+                        <h2 className="text-sm font-medium text-white">Transfer Request</h2>
+                      </div>
+                      <TransferForm
+                        asset={selectedAsset!}
+                        currentHolderId={holder.user_id}
+                        currentHolderName={holder.user_name}
+                        onSuccess={handleTransferSuccess}
+                      />
+                    </>
+                  ) : (
+                    <>
+                      <div className="mb-4 flex items-center gap-2">
+                        <RotateCcw className="h-4 w-4 text-neutral-400" />
+                        <h2 className="text-sm font-medium text-white">Return Asset</h2>
+                      </div>
+                      <form onSubmit={handleReturnSubmit} className="space-y-4">
+                        <div>
+                          <label className={labelCls}>Condition check-in notes</label>
+                          <textarea
+                            value={returnNotes}
+                            onChange={(e) => setReturnNotes(e.target.value)}
+                            rows={3}
+                            className={`${inputCls} resize-none`}
+                            placeholder="Describe condition upon return (e.g. Excellent, minor scratches, fully working)..."
+                          />
+                        </div>
+                        <button
+                          type="submit"
+                          disabled={returnMutation.isPending}
+                          className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-emerald-700 disabled:opacity-50"
+                        >
+                          <RotateCcw className="h-4 w-4" />
+                          {returnMutation.isPending ? "Processing Return..." : "Confirm Return"}
+                        </button>
+                      </form>
+                    </>
+                  )}
+                </div>
+              ) : allocStatus.current_status === "AVAILABLE" ? (
                 <>
                   <div className="mb-4 flex items-center gap-2">
                     <UserPlus className="h-4 w-4 text-neutral-400" />
@@ -294,6 +378,16 @@ export default function AllocationTransferScreen() {
                     </button>
                   </form>
                 </>
+              ) : (
+                <div className="flex items-start gap-3 rounded-lg border border-amber-950/50 bg-amber-950/20 p-4">
+                  <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-400" />
+                  <div>
+                    <h3 className="text-sm font-medium text-amber-400">Allocation Blocked</h3>
+                    <p className="mt-1 text-xs text-amber-400/70">
+                      This asset is currently in <strong>{allocStatus.current_status}</strong> status. Only assets with a status of <strong>AVAILABLE</strong> can be directly allocated.
+                    </p>
+                  </div>
+                </div>
               )}
             </div>
           )}

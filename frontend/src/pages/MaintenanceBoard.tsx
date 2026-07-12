@@ -120,10 +120,10 @@ export default function MaintenanceBoard() {
   const visibleColumns = COLUMNS;
 
   return (
-    <div className="flex h-screen bg-neutral-950">
+    <div className="min-h-screen bg-neutral-950">
       <Sidebar />
 
-      <main className="ml-60 flex-1 flex flex-col overflow-hidden">
+      <main className="ml-60 min-h-screen flex flex-col overflow-hidden">
         {/* Header */}
         <div className="flex items-center justify-between border-b border-neutral-800 px-6 py-4">
           <div>
@@ -141,7 +141,7 @@ export default function MaintenanceBoard() {
         </div>
 
         {/* Kanban Board */}
-        <div className="flex-1 overflow-x-auto p-6">
+        <div className="flex-1 overflow-hidden p-6">
           {isLoading ? (
             <div className="flex h-64 items-center justify-center">
               <div className="h-8 w-8 animate-spin rounded-full border-2 border-neutral-600 border-t-blue-500" />

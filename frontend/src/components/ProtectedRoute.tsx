@@ -1,8 +1,14 @@
 import { Navigate } from "react-router-dom";
 import { useAuthStore } from "@/stores/authStore";
 
-export function ProtectedRoute({ children }: { children: React.ReactNode }) {
-  const { isAuthenticated, isLoading } = useAuthStore();
+interface ProtectedRouteProps {
+  children: React.ReactNode;
+  /** If set, only these roles can access the route. */
+  allowedRoles?: string[];
+}
+
+export function ProtectedRoute({ children, allowedRoles }: ProtectedRouteProps) {
+  const { isAuthenticated, isLoading, user } = useAuthStore();
 
   if (isLoading) {
     return (
@@ -14,6 +20,14 @@ export function ProtectedRoute({ children }: { children: React.ReactNode }) {
 
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
+  }
+
+  // Role-based guarding
+  if (allowedRoles && allowedRoles.length > 0) {
+    const userRole = user?.role ?? "EMPLOYEE";
+    if (!allowedRoles.includes(userRole)) {
+      return <Navigate to="/dashboard" replace />;
+    }
   }
 
   return <>{children}</>;

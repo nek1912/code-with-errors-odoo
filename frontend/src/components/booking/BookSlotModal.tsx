@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -34,6 +35,15 @@ const bookingSchema = z
       return end > start;
     },
     { message: "End time must be after start time", path: ["end_time"] }
+  )
+  .refine(
+    (data) => {
+      if (!data.date || !data.start_time) return true;
+      const start = new Date(`${data.date}T${data.start_time}:00Z`);
+      const now = new Date();
+      return start >= now;
+    },
+    { message: "Start time must be in the future", path: ["start_time"] }
   );
 
 type BookingFormValues = z.infer<typeof bookingSchema>;
@@ -107,6 +117,48 @@ export function BookSlotModal({
 
   const startTime = watch("start_time");
   const endTime = watch("end_time");
+
+  // Dynamically calculate future default start and end times when modal opens
+  useEffect(() => {
+    if (open) {
+      const now = new Date();
+      const selectedD = new Date(selectedDate + "T00:00:00");
+      let defaultStart = "09:00";
+      let defaultEnd = "10:00";
+
+      // If selected date is today, check if 9:00 AM has passed and pick next half hour
+      if (selectedD.toDateString() === now.toDateString()) {
+        const curHour = now.getHours();
+        const curMin = now.getMinutes();
+
+        let startH = curHour;
+        let startM = 0;
+        if (curMin > 30) {
+          startH += 1;
+          startM = 0;
+        } else if (curMin > 0) {
+          startM = 30;
+        }
+
+        const candidateStart = `${String(startH).padStart(2, "0")}:${String(startM).padStart(2, "0")}`;
+        if (TIME_OPTIONS.includes(candidateStart)) {
+          defaultStart = candidateStart;
+          const endH = startH + 1;
+          const candidateEnd = `${String(endH).padStart(2, "0")}:${String(startM).padStart(2, "0")}`;
+          if (TIME_OPTIONS.includes(candidateEnd)) {
+            defaultEnd = candidateEnd;
+          }
+        }
+      }
+
+      reset({
+        title: "",
+        date: selectedDate,
+        start_time: defaultStart,
+        end_time: defaultEnd,
+      });
+    }
+  }, [open, selectedDate, reset]);
 
   const createMutation = useMutation({
     mutationFn: createBooking,

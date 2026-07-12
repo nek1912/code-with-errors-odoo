@@ -86,7 +86,6 @@ export default function DashboardPage() {
       const res = await api.get("/dashboard/overview");
       return res.data;
     },
-    staleTime: 30_000,
     retry: 1,
   });
 

@@ -148,6 +148,9 @@ export default function SignupPage() {
               <p className="text-xs text-red-500">{errors.accept_terms.message}</p>
             )}
 
+            <div className="rounded-xl border border-neutral-800/80 bg-neutral-900/30 p-3 text-sm text-neutral-400">
+              Self-registered accounts are created with the <strong>Employee</strong> role. Administrators can assign Admin, Asset Manager, or Department Head roles after signup.
+            </div>
             <Button type="submit" className="w-full" isLoading={isLoading}>
               Create Account
             </Button>
